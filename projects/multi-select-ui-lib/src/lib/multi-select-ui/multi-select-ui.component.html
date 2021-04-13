@@ -1,0 +1,18 @@
+<div class="multiSelect" #container >
+	<div *ngFor="let country of selectedCountry" class="selectedCountry">{{ country }}</div>
+	<div (click)="onClickInput($event)" class="dropdownButton">{{ buttonText }} <span class="{{ dropdownIcon }}"></span></div>
+	<ul class="countryList" [hidden]="!dropdownVisible" >
+		<li *ngIf="filter">
+			<input type="text" class="multiSearchBar" placeholder="Search Country" (input)="onSearchChange($event.target.value)" />
+		</li>
+		<div class="countryOptions">
+			<li *ngFor="let data of options" (change)="onChange($event,data.value,data.label)">
+				<label for="countryText{{ data.value }}">
+					<input type="checkbox" class="checkbox" [checked]="data.isChecked" name="countryCode" id="countryText{{ data.value }}"  value="{{ data.value }}" />
+					<span>{{ data.label }}</span>
+				</label>
+			</li>
+		</div>
+	</ul>
+</div>
+

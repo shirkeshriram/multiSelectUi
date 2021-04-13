@@ -1,0 +1,34 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "paths": {
+      "multi-select-ui": [
+        "dist/multi-select-ui/multi-select-ui",
+        "dist/multi-select-ui"
+      ],
+      "multi-select-ui-lib": [
+        "dist/multi-select-ui-lib/multi-select-ui-lib",
+        "dist/multi-select-ui-lib"
+      ]
+    },
+    "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+	"enableIvy": false,
+  }
+}
